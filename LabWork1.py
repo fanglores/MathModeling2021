@@ -18,6 +18,7 @@ RK_y = []
 x = []
 
 # инициализируем значения в точке 0
+x.append(float(0))
 E_y.append(float(1))
 RK_y.append(float(1))
 
@@ -37,14 +38,12 @@ def RungeKutt():
         K4 = h * f(x[i] + h, RK_y[i] + K3)
         RK_y.append(RK_y[i] + (K1 + 2 * K2 + 2 * K3 + K4) / 6)
 
-for i in range(int(1 // h)):
+for i in range(1, int(1 // h) + 1):
     x.append(i * h)
 
 Eiler()
 RungeKutt()
 
-E_y.pop(0)
-RK_y.pop(0)
 print(x)
 print(E_y)
 print(RK_y)
