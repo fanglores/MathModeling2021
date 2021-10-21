@@ -58,7 +58,3 @@ plt.plot(x, RK_y, 'r', label = 'Runge-Kutt')
 plt.legend(loc = 'lower right')
 
 plt.show()
-
-# print (fig.axes)
-# print (len(y))
-
