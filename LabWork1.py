@@ -30,7 +30,7 @@ RK_y.append(float(1))
 # метод Эйлера
 def Eiler():
     for i in range(int(1 // h) + 1):
-        E_y.append(E_y[i] + h * f(i * h, E_y[i]))
+        E_y.append(E_y[i] + h * f((i+1) * h, E_y[i]))
 
 
 # Метод Рунге-Кутта
